@@ -1,0 +1,7 @@
+---
+
+firewall_enabled: true
+firewalld_zones:
+  - name: development
+    sources:
+      - 192.168.0.0/24

@@ -1,0 +1,7 @@
+- hosts: all
+  become: yes
+  roles:
+    - role: firewalld_common
+    - role: firewalld_rules
+  vars_files:
+    - firewall_config.yml

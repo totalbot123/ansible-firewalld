@@ -1,0 +1,19 @@
+firewalld_rules:
+  inbound:
+    - name: elasticsearch
+      zone: development
+      ports:
+        - port: 9200
+          protocol: tcp
+        - port: 9300
+          protocol: tcp
+    - name: ssh
+      zone: development
+      ports:
+        - port: 22
+          protocol: tcp
+
+firewalld_zones:
+  - name: development
+    sources:
+      - 192.168.10.0/24
